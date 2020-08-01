@@ -1,0 +1,16 @@
+# Nutstore files
+.DS_Store
+
+# VSCode configuration
+.vscode/
+
+
+# C++ Java Python
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Compiled class file
+*.class
