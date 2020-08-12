@@ -12,11 +12,11 @@ class Solution:
             if not 0 <= x < n or not 0 <= y < m or board[x][y] != "O":
                 return
 
-                board[x][y] = "#"
-                dfs(x + 1, y)
-                dfs(x - 1, y)
-                dfs(x, y + 1)
-                dfs(x, y - 1)
+            board[x][y] = "#"
+            dfs(x + 1, y)
+            dfs(x - 1, y)
+            dfs(x, y + 1)
+            dfs(x, y - 1)
 
         # 左右
         for i in range(n):
