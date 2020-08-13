@@ -22,11 +22,11 @@ class Solution:
         while queue:
             n = queue.popleft()
 
-            for neighboor in n.neighboors:
-                if neighboor not in visited:
-                    visited[neighboor] = Node(neighboor.val, [])
-                    queue.append(neighboor)
+            for neighbor in n.neighbors:
+                if neighbor not in visited:
+                    visited[neighbor] = Node(neighbor.val, [])
+                    queue.append(neighbor)
 
-                visited[n].neighboors.append(visited[neighboor])
+                visited[n].neighbors.append(visited[neighbor])
 
         return visited[node]
