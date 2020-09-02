@@ -6,6 +6,7 @@
 
 
 # C++ Java Python
+*.class
 
 # Executables
 *.exe
