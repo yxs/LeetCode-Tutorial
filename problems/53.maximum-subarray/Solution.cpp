@@ -4,7 +4,9 @@
 
 using namespace std;
 
-// brute force solution. O(n^3)
+// brute force solution.
+// The time complexity of this method is up to O(n^3), run in cubic time.
+// 两层遍历，枚举所有子区段，并对每个子区段求和，并取最大值。
 class SolutionBF
 {
 public:
@@ -13,6 +15,7 @@ public:
         int size = nums.size();
         int gs = nums[0];
         for (int i = 0; i < size; ++i)
+        {
             for (int j = 0; j < size; ++j) // Enumerate all sections
             {
                 int s = 0;
@@ -21,11 +24,13 @@ public:
                 if (gs < s)
                     gs = s;
             }
+        }
         return gs;
     }
 };
 
-//incremental strategy, a little improvement, but not enough. O(n^2)
+// incremental strategy, a little improvement, but not enough. O(n^2)
+// 递增策略，求和时复用之前的结果
 class SolutionIC
 {
 public:
@@ -49,6 +54,8 @@ public:
 };
 
 // divide and conquer. O(nlogn)
+// 求得前缀、后缀的最大值
+// 求得跨越前、后缀的最大值
 class SolutionDC
 {
 public:
@@ -76,6 +83,7 @@ public:
 };
 
 // greedy algorithm. O(n)
+// 从右向左迭代求和，小于 0 则重新计算
 class SolutionGR
 {
 public:
@@ -97,6 +105,7 @@ public:
 };
 
 // dynamic programming. O(n)
+// 最大子区段取决于（之前的和加上当前值）与（当前值）中的较大者
 class SolutionDP
 {
 public:
@@ -118,7 +127,7 @@ public:
 int main()
 {
     vector<int> nums{-2, 1, -3, 4, -1, 2, 1, -5, 4};
-    SolutionDP dp;
-    int res = dp.maxSubArray(nums);
+    SolutionDP sol;
+    int res = sol.maxSubArray(nums);
     cout << res;
 }
