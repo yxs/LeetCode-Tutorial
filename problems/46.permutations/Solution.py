@@ -1,13 +1,4 @@
-"""
-@Date: 2020-05-13 12:37:24
-@LastEditors: XueSong Ye
-@LastEditTime: 2020-05-13 12:37:51
-"""
-
-# https://leetcode-cn.com/problems/permutations/
-
 # 把「路径」和「选择」列表作为决策树上每个节点的属性
-
 
 def permute(nums):
     def backtrack(first=0):
