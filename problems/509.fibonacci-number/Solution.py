@@ -1,3 +1,4 @@
+# iteratively
 class Solution:
     def fib(self, N: int) -> int:
         if N == 1 or N == 2:
@@ -11,5 +12,13 @@ class Solution:
         return curr
 
 
-sol = Solution()
+# recursively
+class Solution1:
+    def fib(self, N: int) -> int:
+        if N == 1 or N == 2:
+            return 1
+        return self.fib(N - 1) + self.fib(N - 2)
+
+
+sol = Solution1()
 print(sol.fib(4))
