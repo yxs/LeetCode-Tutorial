@@ -68,6 +68,38 @@ dp[i + 1][j - 1], dp[i][j - 1], dp[i + 1][j] 时
 
 动态规划技巧优化重叠子问题降低时间复杂度，最后尝试用状态压缩技巧优化空间复杂度
 
+
+
+### KMP
+
+移动位数 = 已匹配的字符数 - 对应的部分匹配值
+
+"部分匹配值"就是"前缀"和"后缀"的最长的共有元素的长度
+
+
+https://www.coursera.org/lecture/algorithms-part2/introduction-to-substring-search-n3ZpG
+
+// TODO
+
+
+## Most consistent ways of dealing with the series of stock problems
+
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/discuss/108870/Most-consistent-ways-of-dealing-with-the-series-of-stock-problems
+
+https://labuladong.gitbook.io/algo/dong-tai-gui-hua-xi-lie/1.5-qi-ta-jing-dian-wen-ti/tuan-mie-gu-piao-wen-ti
+
+
+第 i 天，
+至今最多交易 k 次，
+1 表示持有股票
+
+dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k][1] + prices[i])
+dp[i][k][1] = max(dp[i-1][k][1], dp[i-1][k-1][0] - prices[i])
+
+
+## 打家劫舍系列
+
+
 ## References
 
 1. [How should I explain dynamic programming to a 4-year-old?](https://www.quora.com/How-should-I-explain-dynamic-programming-to-a-4-year-old/answer/Jonathan-Paulson)
