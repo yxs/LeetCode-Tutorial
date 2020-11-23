@@ -8,9 +8,9 @@ class Solutiondj_khaled:
             if head >= tail:
                 return
             l, r = head, tail
-            # 选取中间元素作为基准，不必最后再归位基准
             m = (r - l) // 2 + l
             pivot = nums[m]
+            # l == r 时归位基准
             while r >= l:
                 # 左向右，找大于基数的
                 while r >= l and nums[l] < pivot:
@@ -73,7 +73,7 @@ s1 = Solutiondj_khaled()
 s2 = SolutionCLRS()
 s3 = SolutionTwohu()  # shouldn't use
 
-nums = [10, 7, 8, 9, 1, 5, 5]
+nums = [10, 7, 8, 9, 1, 5, 4, 2]
 n = len(nums)
 print(s1.quickSort(nums))
 print("------")
