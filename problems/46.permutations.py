@@ -1,5 +1,6 @@
 # 把「路径」和「选择」列表作为决策树上每个节点的属性
 
+
 def permute(nums):
     def backtrack(first=0):
         if first == n:

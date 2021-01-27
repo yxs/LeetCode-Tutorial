@@ -15,3 +15,7 @@
 
 # Compiled class file
 *.class
+
+# C Sharp
+[Bb]in/
+[Oo]bj/

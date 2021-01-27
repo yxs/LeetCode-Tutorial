@@ -14,3 +14,9 @@ def backtrack(路径, 选择列表):
         backtrack(路径, 选择列表)
         撤销选择
 ```
+
+
+> https://leetcode-cn.com/problems/permutations/solution/hui-su-suan-fa-python-dai-ma-java-dai-ma-by-liweiw/
+
+![](https://pic.leetcode-cn.com/0bf18f9b86a2542d1f6aa8db6cc45475fce5aa329a07ca02a9357c2ead81eec1-image.png)
+

@@ -18,7 +18,7 @@ class Solution:
             dfs(x, y + 1)
             dfs(x, y - 1)
 
-        # 左右
+        # 左右边查找O以及与O相连的O，改为#
         for i in range(n):
             dfs(i, 0)
             dfs(i, m - 1)

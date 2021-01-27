@@ -1,9 +1,3 @@
-"""
-@Date: 2020-05-05 10:01:22
-@LastEditors: XueSong Ye
-@LastEditTime: 2020-05-05 11:42:48
-"""
-
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, x):
@@ -12,6 +6,7 @@ class TreeNode:
         self.right = None
 
 
+# 中序遍历
 class Solution:
     def isValidBST(self, root: TreeNode) -> bool:
         stack, inorder = [], float("-inf")

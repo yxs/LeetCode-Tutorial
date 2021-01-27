@@ -6,6 +6,7 @@ class TreeNode:
         self.right = right
 
 
+# ?
 class Solution:
     def flatten(self, root: TreeNode) -> None:
         """
