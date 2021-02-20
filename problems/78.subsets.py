@@ -1,6 +1,6 @@
 from typing import List
 
-
+# other solution: Bit Manipulation or DFS
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         res = [[]]

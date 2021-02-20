@@ -10,7 +10,7 @@ class Solution:
 
         m, n = len(num1), len(num2)
 
-        ansArr = [0] * (m + n)
+        ansArr = [0] * (m + n)  # 结果最多为 m + n 位数
 
         for i in range(m - 1, -1, -1):
             x = int(num1[i])
@@ -24,4 +24,3 @@ class Solution:
         index = 1 if ansArr[0] == 0 else 0
         ans = "".join(str(x) for x in ansArr[index:])
         return ans
-
